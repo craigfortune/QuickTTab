@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E22E2C0516A9AB2F003B3BD1 /* TimetableData.m in Sources */ = {isa = PBXBuildFile; fileRef = E22E2C0416A9AB2F003B3BD1 /* TimetableData.m */; };
+		E23EF80216A98D540002BF0B /* TimetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E23EF80116A98D540002BF0B /* TimetableViewController.m */; };
+		E257F2D416A731C80095A122 /* BfGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E257F2D316A731C80095A122 /* BfGViewController.m */; };
 		E2A20F2F16A1CCF4001CC54A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A20F2E16A1CCF4001CC54A /* UIKit.framework */; };
 		E2A20F3116A1CCF4001CC54A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A20F3016A1CCF4001CC54A /* Foundation.framework */; };
 		E2A20F3316A1CCF4001CC54A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A20F3216A1CCF4001CC54A /* CoreGraphics.framework */; };
@@ -18,12 +21,12 @@
 		E2A20F4516A1CCF4001CC54A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A20F4416A1CCF4001CC54A /* Default-568h@2x.png */; };
 		E2A20F4816A1CCF4001CC54A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A20F4616A1CCF4001CC54A /* MainStoryboard_iPhone.storyboard */; };
 		E2A20F4B16A1CCF4001CC54A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A20F4916A1CCF4001CC54A /* MainStoryboard_iPad.storyboard */; };
-		E2A20F4E16A1CCF4001CC54A /* BfGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A20F4D16A1CCF4001CC54A /* BfGViewController.m */; };
 		E2A20F5616A1CCF4001CC54A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A20F5516A1CCF4001CC54A /* SenTestingKit.framework */; };
 		E2A20F5716A1CCF4001CC54A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A20F2E16A1CCF4001CC54A /* UIKit.framework */; };
 		E2A20F5816A1CCF4001CC54A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A20F3016A1CCF4001CC54A /* Foundation.framework */; };
 		E2A20F6016A1CCF4001CC54A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2A20F5E16A1CCF4001CC54A /* InfoPlist.strings */; };
 		E2A20F6316A1CCF4001CC54A /* TestNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A20F6216A1CCF4001CC54A /* TestNativeTests.m */; };
+		E2D2EF9416A62454006A56FC /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D2EF9316A62454006A56FC /* InputViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E2A20F2A16A1CCF4001CC54A /* TestNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E22E2C0316A9AB2F003B3BD1 /* TimetableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableData.h; sourceTree = "<group>"; };
+		E22E2C0416A9AB2F003B3BD1 /* TimetableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableData.m; sourceTree = "<group>"; };
+		E23EF80016A98D540002BF0B /* TimetableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableViewController.h; sourceTree = "<group>"; };
+		E23EF80116A98D540002BF0B /* TimetableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableViewController.m; sourceTree = "<group>"; };
+		E257F2D216A731C80095A122 /* BfGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BfGViewController.h; sourceTree = "<group>"; };
+		E257F2D316A731C80095A122 /* BfGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BfGViewController.m; sourceTree = "<group>"; };
+		E2A20F2A16A1CCF4001CC54A /* QuickTTab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickTTab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A20F2E16A1CCF4001CC54A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E2A20F3016A1CCF4001CC54A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E2A20F3216A1CCF4001CC54A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,14 +61,14 @@
 		E2A20F4416A1CCF4001CC54A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E2A20F4716A1CCF4001CC54A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		E2A20F4A16A1CCF4001CC54A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		E2A20F4C16A1CCF4001CC54A /* BfGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BfGViewController.h; sourceTree = "<group>"; };
-		E2A20F4D16A1CCF4001CC54A /* BfGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BfGViewController.m; sourceTree = "<group>"; };
 		E2A20F5416A1CCF4001CC54A /* TestNativeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestNativeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A20F5516A1CCF4001CC54A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E2A20F5D16A1CCF4001CC54A /* TestNativeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestNativeTests-Info.plist"; sourceTree = "<group>"; };
 		E2A20F5F16A1CCF4001CC54A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E2A20F6116A1CCF4001CC54A /* TestNativeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNativeTests.h; sourceTree = "<group>"; };
 		E2A20F6216A1CCF4001CC54A /* TestNativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNativeTests.m; sourceTree = "<group>"; };
+		E2D2EF9216A62454006A56FC /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
+		E2D2EF9316A62454006A56FC /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +108,7 @@
 		E2A20F2B16A1CCF4001CC54A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E2A20F2A16A1CCF4001CC54A /* TestNative.app */,
+				E2A20F2A16A1CCF4001CC54A /* QuickTTab.app */,
 				E2A20F5416A1CCF4001CC54A /* TestNativeTests.octest */,
 			);
 			name = Products;
@@ -119,13 +128,19 @@
 		E2A20F3416A1CCF4001CC54A /* TestNative */ = {
 			isa = PBXGroup;
 			children = (
+				E2D2EF9216A62454006A56FC /* InputViewController.h */,
+				E2D2EF9316A62454006A56FC /* InputViewController.m */,
 				E2A20F3D16A1CCF4001CC54A /* BfGAppDelegate.h */,
 				E2A20F3E16A1CCF4001CC54A /* BfGAppDelegate.m */,
 				E2A20F4616A1CCF4001CC54A /* MainStoryboard_iPhone.storyboard */,
 				E2A20F4916A1CCF4001CC54A /* MainStoryboard_iPad.storyboard */,
-				E2A20F4C16A1CCF4001CC54A /* BfGViewController.h */,
-				E2A20F4D16A1CCF4001CC54A /* BfGViewController.m */,
+				E23EF80016A98D540002BF0B /* TimetableViewController.h */,
+				E23EF80116A98D540002BF0B /* TimetableViewController.m */,
 				E2A20F3516A1CCF4001CC54A /* Supporting Files */,
+				E257F2D216A731C80095A122 /* BfGViewController.h */,
+				E257F2D316A731C80095A122 /* BfGViewController.m */,
+				E22E2C0316A9AB2F003B3BD1 /* TimetableData.h */,
+				E22E2C0416A9AB2F003B3BD1 /* TimetableData.m */,
 			);
 			path = TestNative;
 			sourceTree = "<group>";
@@ -180,7 +195,7 @@
 			);
 			name = TestNative;
 			productName = TestNative;
-			productReference = E2A20F2A16A1CCF4001CC54A /* TestNative.app */;
+			productReference = E2A20F2A16A1CCF4001CC54A /* QuickTTab.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E2A20F5316A1CCF4001CC54A /* TestNativeTests */ = {
@@ -277,7 +292,10 @@
 			files = (
 				E2A20F3B16A1CCF4001CC54A /* main.m in Sources */,
 				E2A20F3F16A1CCF4001CC54A /* BfGAppDelegate.m in Sources */,
-				E2A20F4E16A1CCF4001CC54A /* BfGViewController.m in Sources */,
+				E2D2EF9416A62454006A56FC /* InputViewController.m in Sources */,
+				E257F2D416A731C80095A122 /* BfGViewController.m in Sources */,
+				E23EF80216A98D540002BF0B /* TimetableViewController.m in Sources */,
+				E22E2C0516A9AB2F003B3BD1 /* TimetableData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +411,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestNative/TestNative-Prefix.pch";
 				INFOPLIST_FILE = "TestNative/TestNative-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = QuickTTab;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -404,7 +423,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestNative/TestNative-Prefix.pch";
 				INFOPLIST_FILE = "TestNative/TestNative-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = QuickTTab;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -462,6 +482,7 @@
 				E2A20F6816A1CCF4001CC54A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2A20F6916A1CCF4001CC54A /* Build configuration list for PBXNativeTarget "TestNativeTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +491,7 @@
 				E2A20F6B16A1CCF4001CC54A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
