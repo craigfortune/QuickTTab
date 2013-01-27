@@ -10,12 +10,14 @@
 
 @interface TimetableData : NSObject
 {
-	NSString* _idStr;
-	int _sem;
 }
 
 @property (retain) NSString* idStr;
 @property (assign) int sem;
+@property (retain) NSString* urlStr;
+
+
+- (NSString*) completeURLString;
 
 @end
 

@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "TimetableData.h"
+#import "TimetableViewController.h"
 
-@interface BfGViewController : UIViewController  <UITextFieldDelegate, UIScrollViewDelegate>
+@interface BfGViewController : UIViewController  <UITextFieldDelegate, UIScrollViewDelegate, TTRemovalProtocol>
 {
-	TimeTableModel* _timeTableModel;
 	NSMutableArray* viewControllerArr;
 	UIView* inputView;
 }

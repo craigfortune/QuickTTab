@@ -41,9 +41,9 @@
 	[self showFirstPage];
 	
 	// Don't know why, but there is an extra view here, hence the -1
-	int numSubViews = self.scrollView.subviews.count - 1;
+	int numSubViews = self.scrollView.subviews.count;
 	[self.pageControl setNumberOfPages:numSubViews];
-	[self resizeScrollView:(1024 * numSubViews) height:650];
+	[self resizeScrollView:(1024 * numSubViews) height:699];
 }
 
 - (void) setupInputScene
@@ -53,7 +53,7 @@
 	
 	inputView = tmp.view;
 	
-	int height = 650;
+	int height = 699;
 	
 	CGRect frame = tmp.view.frame;
 	frame.origin.x = 0;
@@ -84,7 +84,7 @@
 	CGRect frame;
 	
 	int i = 0;
-	int height = 650;
+	int height = 699;
 	
 	// Iterate through the data in the model and instantiate ViewControllers for each data entry
 	for (TimetableData* ttData in self.timeTableModel.timeTableArr)
@@ -100,22 +100,24 @@
 		
 		tmp.view.frame = frame;
 		
-		NSString* str = [NSString stringWithFormat:@"http://www.bolton.ac.uk/Timetables/MyTimetable/S%iTimetable.asp?Boltonid=%@", ttData.sem, ttData.idStr];
-		[tmp loadWebView:str];
+		[tmp setTtData:ttData];
+		[tmp loadWebView];
 	
 		[viewControllerArr addObject:tmp];
 		
 		i++;
+		
+		tmp.ttRemovalDelegate = self;
 	}
 	
 	int numSubViews = self.scrollView.subviews.count;
 	[self.pageControl setNumberOfPages:numSubViews];
-	[self resizeScrollView:(1024 * numSubViews) height:650];
+	[self resizeScrollView:(1024 * numSubViews) height:699];
 }
 
 - (void) showFirstPage
 {
-	[self.scrollView scrollRectToVisible:CGRectMake(0, 0, 1024, 650) animated:YES];
+	[self.scrollView scrollRectToVisible:CGRectMake(0, 0, 1024, 699) animated:YES];
 	[self.pageControl setCurrentPage:0];
 }
 
@@ -123,7 +125,7 @@
 {
 	CGRect frameRect = self.scrollView.frame;
 	
-	[self.scrollView scrollRectToVisible:CGRectMake(frameRect.size.width * page, 0, 1024, 650) animated:YES];
+	[self.scrollView scrollRectToVisible:CGRectMake(frameRect.size.width * page, 0, 1024, 699) animated:YES];
 	[self.pageControl setCurrentPage:page];
 }
 
@@ -171,6 +173,16 @@
 		page++;
 	
 	[self showPage:page];
+}
+
+//
+
+- (void) removeTT:(TimetableViewController*)ttViewContr
+{
+	[ttViewContr removeFromParentViewController];
+	[ttViewContr.view removeFromSuperview];
+	[self.timeTableModel removeTimeTable:ttViewContr.ttData];
+	[self refreshFromModel];
 }
 
 @end

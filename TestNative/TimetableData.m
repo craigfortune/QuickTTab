@@ -10,6 +10,11 @@
 
 @implementation TimetableData
 
+- (NSString*) completeURLString
+{
+	return [NSString stringWithFormat:@"http://www.bolton.ac.uk/Timetables/MyTimetable/S%iTimetable.asp?Boltonid=%@", self.sem, self.idStr];
+}
+
 @end
 
 @implementation TimeTableModel
@@ -33,8 +38,9 @@
 	[self.timeTableArr addObject:ttData];
 }
 
-- (void) removeTimeTable:(id)timeTable
+- (void) removeTimeTable:(TimetableData*)ttData
 {
+	[self.timeTableArr removeObject:ttData];
 }
 
 @end

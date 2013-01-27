@@ -7,14 +7,29 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimetableData.h"
+
+@class TimetableViewController;
+
+@protocol TTRemovalProtocol <NSObject>
+
+@required
+
+//- (void) removeTT:(TimetableViewController*) ttViewCont;
+- (void) removeTT:(TimetableViewController*)ttViewContr;
+
+@end
 
 @interface TimetableViewController : UIViewController
 {
-	
 }
+
 @property (strong, nonatomic) IBOutlet UIWebView *timetableView;
+@property (weak, nonatomic) IBOutlet UIButton *removeButton;
+@property (retain) id<TTRemovalProtocol> ttRemovalDelegate;
+@property (retain) TimetableData* ttData;
 
-
-- (void) loadWebView:(NSString*)urlStr;
+- (void) loadWebView;
+- (IBAction)removeTT:(id)sender;
 
 @end

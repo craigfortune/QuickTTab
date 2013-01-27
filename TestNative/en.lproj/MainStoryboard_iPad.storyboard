@@ -26,11 +26,11 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IZ8-Im-QEQ" firstAttribute="trailing" secondItem="OZh-Sk-zuB" secondAttribute="trailing" type="default" id="0kH-n0-NSA"/>
-                            <constraint firstItem="roC-96-Row" firstAttribute="top" secondItem="OZh-Sk-zuB" secondAttribute="top" constant="49" id="9kq-Ij-zF0"/>
                             <constraint firstItem="IZ8-Im-QEQ" firstAttribute="top" secondItem="roC-96-Row" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="NxC-jR-Rhh"/>
+                            <constraint firstAttribute="bottom" secondItem="IZ8-Im-QEQ" secondAttribute="bottom" constant="5" id="QUe-0F-swv"/>
                             <constraint firstItem="roC-96-Row" firstAttribute="leading" secondItem="OZh-Sk-zuB" secondAttribute="leading" type="default" id="VlF-D4-Bee"/>
                             <constraint firstItem="roC-96-Row" firstAttribute="trailing" secondItem="OZh-Sk-zuB" secondAttribute="trailing" type="default" id="fJO-MB-ZTc"/>
-                            <constraint firstItem="roC-96-Row" firstAttribute="centerY" secondItem="OZh-Sk-zuB" secondAttribute="centerY" type="default" id="nEg-XI-8O0"/>
+                            <constraint firstItem="roC-96-Row" firstAttribute="top" secondItem="OZh-Sk-zuB" secondAttribute="top" type="default" id="gdm-ea-2Bo"/>
                             <constraint firstItem="IZ8-Im-QEQ" firstAttribute="leading" secondItem="OZh-Sk-zuB" secondAttribute="leading" type="default" id="zkJ-yb-q1d"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -82,7 +82,7 @@
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pd3-gC-hDr">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Load Timetable">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -93,19 +93,27 @@
                                     <action selector="loadTT:" destination="2" eventType="touchUpInside" id="dWK-VJ-ycR"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bolton_logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="6KM-f1-66v">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="Rqz-5B-W8C"/>
+                                    <constraint firstAttribute="width" constant="385" id="nCd-Ne-xbn"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MTX-lc-XIt" firstAttribute="top" secondItem="Ew2-vK-ZDO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3kQ-PF-9ie"/>
-                            <constraint firstItem="Ew2-vK-ZDO" firstAttribute="centerX" secondItem="5" secondAttribute="centerX" type="default" id="3m2-4V-EVR"/>
                             <constraint firstItem="pd3-gC-hDr" firstAttribute="top" secondItem="MTX-lc-XIt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="55p-Uq-N4V"/>
                             <constraint firstItem="MTX-lc-XIt" firstAttribute="leading" secondItem="pd3-gC-hDr" secondAttribute="leading" type="default" id="7HR-g7-8Wv"/>
                             <constraint firstItem="uhf-Yy-udi" firstAttribute="centerX" secondItem="Ew2-vK-ZDO" secondAttribute="centerX" type="default" id="FBu-BW-2Sf"/>
+                            <constraint firstItem="6KM-f1-66v" firstAttribute="centerX" secondItem="uhf-Yy-udi" secondAttribute="centerX" type="default" id="ONX-E4-MMR"/>
                             <constraint firstItem="MTX-lc-XIt" firstAttribute="leading" secondItem="Ew2-vK-ZDO" secondAttribute="leading" type="default" id="PVj-qV-TYR"/>
                             <constraint firstItem="uhf-Yy-udi" firstAttribute="top" secondItem="5" secondAttribute="top" constant="429" id="VFB-Pf-ItL"/>
                             <constraint firstItem="pd3-gC-hDr" firstAttribute="trailing" secondItem="MTX-lc-XIt" secondAttribute="trailing" type="default" id="aOe-7l-G3l"/>
                             <constraint firstItem="MTX-lc-XIt" firstAttribute="trailing" secondItem="Ew2-vK-ZDO" secondAttribute="trailing" type="default" id="d2u-iK-Vye"/>
+                            <constraint firstItem="6KM-f1-66v" firstAttribute="top" secondItem="5" secondAttribute="top" constant="183" id="eGf-Vb-v17"/>
                             <constraint firstItem="Ew2-vK-ZDO" firstAttribute="top" secondItem="uhf-Yy-udi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fYk-c5-J45"/>
+                            <constraint firstItem="MTX-lc-XIt" firstAttribute="centerX" secondItem="5" secondAttribute="centerX" type="default" id="rSd-52-VeD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -122,23 +130,43 @@
             <objects>
                 <viewController storyboardIdentifier="timeTableScene" title="View 1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="khq-7o-YBQ" customClass="TimetableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HsG-WP-KZj">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="655"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="699"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcW-is-qy6" customClass="UIWebView">
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocn-Qt-qZp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="Ka0-0h-1sp"/>
+                                    <constraint firstAttribute="width" constant="73" id="S5Z-ia-iFv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Remove">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeTT:" destination="khq-7o-YBQ" eventType="touchUpInside" id="Rnx-ee-pxs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wcW-is-qy6" firstAttribute="centerX" secondItem="HsG-WP-KZj" secondAttribute="centerX" type="default" id="3y4-Pk-rBk"/>
-                            <constraint firstItem="wcW-is-qy6" firstAttribute="centerY" secondItem="HsG-WP-KZj" secondAttribute="centerY" type="default" id="Alk-xu-qpg"/>
-                            <constraint firstItem="wcW-is-qy6" firstAttribute="leading" secondItem="HsG-WP-KZj" secondAttribute="leading" constant="37" id="UsR-me-DOq"/>
-                            <constraint firstItem="wcW-is-qy6" firstAttribute="top" secondItem="HsG-WP-KZj" secondAttribute="top" constant="12" id="g1S-YZ-Nyd"/>
+                            <constraint firstItem="wcW-is-qy6" firstAttribute="leading" secondItem="HsG-WP-KZj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7Ne-3T-Opg"/>
+                            <constraint firstItem="ocn-Qt-qZp" firstAttribute="top" secondItem="HsG-WP-KZj" secondAttribute="top" constant="14" id="8m9-IZ-AHF"/>
+                            <constraint firstItem="wcW-is-qy6" firstAttribute="top" secondItem="HsG-WP-KZj" secondAttribute="top" constant="54" id="KvP-Yy-WdX"/>
+                            <constraint firstAttribute="trailing" secondItem="ocn-Qt-qZp" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VLQ-3F-qcL"/>
+                            <constraint firstAttribute="bottom" secondItem="wcW-is-qy6" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="dMc-Ht-jo7"/>
+                            <constraint firstAttribute="trailing" secondItem="wcW-is-qy6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wTK-po-BTh"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="removeButton" destination="ocn-Qt-qZp" id="k7d-cf-86r"/>
                         <outlet property="timetableView" destination="wcW-is-qy6" id="hVJ-dZ-ZkC"/>
                     </connections>
                 </viewController>
@@ -147,6 +175,9 @@
             <point key="canvasLocation" x="1413" y="-122"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bolton_logo2.png" width="577" height="221"/>
+    </resources>
     <classes>
         <class className="BfGViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BfGViewController.h"/>
@@ -170,6 +201,8 @@
         <class className="TimetableViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TimetableViewController.h"/>
             <relationships>
+                <relationship kind="action" name="removeTT:"/>
+                <relationship kind="outlet" name="removeButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="timetableView" candidateClass="UIWebView"/>
             </relationships>
         </class>

@@ -26,6 +26,7 @@
 		E2A20F5816A1CCF4001CC54A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A20F3016A1CCF4001CC54A /* Foundation.framework */; };
 		E2A20F6016A1CCF4001CC54A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2A20F5E16A1CCF4001CC54A /* InfoPlist.strings */; };
 		E2A20F6316A1CCF4001CC54A /* TestNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A20F6216A1CCF4001CC54A /* TestNativeTests.m */; };
+		E2B81DED16AB3CE3003F3408 /* bolton_logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B81DEC16AB3CE3003F3408 /* bolton_logo2.png */; };
 		E2D2EF9416A62454006A56FC /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D2EF9316A62454006A56FC /* InputViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +68,10 @@
 		E2A20F5F16A1CCF4001CC54A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E2A20F6116A1CCF4001CC54A /* TestNativeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNativeTests.h; sourceTree = "<group>"; };
 		E2A20F6216A1CCF4001CC54A /* TestNativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNativeTests.m; sourceTree = "<group>"; };
+		E2B81DEC16AB3CE3003F3408 /* bolton_logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bolton_logo2.png; sourceTree = "<group>"; };
 		E2D2EF9216A62454006A56FC /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
 		E2D2EF9316A62454006A56FC /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
+		E2E2BB7016B2EE400033AC70 /* TTRemovalProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTRemovalProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,7 @@
 		E2A20F3416A1CCF4001CC54A /* TestNative */ = {
 			isa = PBXGroup;
 			children = (
+				E2B81DEC16AB3CE3003F3408 /* bolton_logo2.png */,
 				E2D2EF9216A62454006A56FC /* InputViewController.h */,
 				E2D2EF9316A62454006A56FC /* InputViewController.m */,
 				E2A20F3D16A1CCF4001CC54A /* BfGAppDelegate.h */,
@@ -141,6 +145,7 @@
 				E257F2D316A731C80095A122 /* BfGViewController.m */,
 				E22E2C0316A9AB2F003B3BD1 /* TimetableData.h */,
 				E22E2C0416A9AB2F003B3BD1 /* TimetableData.m */,
+				E2E2BB7016B2EE400033AC70 /* TTRemovalProtocol.h */,
 			);
 			path = TestNative;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				E2A20F4516A1CCF4001CC54A /* Default-568h@2x.png in Resources */,
 				E2A20F4816A1CCF4001CC54A /* MainStoryboard_iPhone.storyboard in Resources */,
 				E2A20F4B16A1CCF4001CC54A /* MainStoryboard_iPad.storyboard in Resources */,
+				E2B81DED16AB3CE3003F3408 /* bolton_logo2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

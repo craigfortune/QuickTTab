@@ -20,23 +20,28 @@
 	// Do any additional setup after loading the view.
 	
 	self.timetableView.hidden = NO;
-	
-	int sem = 2;
-	NSString* idNum = @"7040253";
-	NSString* urlStr = [NSString stringWithFormat:@"http://www.bolton.ac.uk/Timetables/MyTimetable/S%iTimetable.asp?Boltonid=%@", sem, idNum];
-	[self loadWebView:urlStr];
 }
 
-- (void) loadWebView:(NSString*)urlStr
+- (void) loadWebView
 {
-	NSURL *url = [NSURL URLWithString:urlStr];
-	NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+	NSURL* url = [NSURL URLWithString:self.ttData.completeURLString];
 	
+	NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
 	[self.timetableView loadRequest:requestObj];
 	
 	[self.timetableView setScalesPageToFit:YES];
 }
 
+- (IBAction)removeTT:(id)sender
+{	
+	CGRect frame = self.view.frame;
+	frame.origin.x = frame.origin.x + 1024;
+	frame.origin.y = frame.origin.y - 1024;
+	[UIView animateWithDuration:0.5f
+					 animations:^{self.view.frame = frame;}
+					 completion:^(BOOL finished){[self.ttRemovalDelegate removeTT:self];}
+	 ];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -47,6 +52,7 @@
 - (void)viewDidUnload
 {
 	[self setTimetableView:nil];
+	[self setRemoveButton:nil];
 	[super viewDidUnload];
 }
 @end

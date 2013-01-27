@@ -34,6 +34,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+//
+
+
+//
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+	NSLog(@"Focus");
+	
+	CGRect frame = self.view.frame;
+	frame.origin.y = frame.origin.y - 200;	
+	[UIView animateWithDuration:1.0f animations:^{self.view.frame = frame;}];
+}
+
+- (void) textFieldDidEndEditing:(UITextField *)textField
+{
+	NSLog(@"Lost Focus");
+	
+	CGRect frame = self.view.frame;
+	frame.origin.y = frame.origin.y + 200;
+	[UIView animateWithDuration:1.0f animations:^{self.view.frame = frame;}];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField
 {
     if (theTextField == self.textField)
@@ -42,6 +65,8 @@
     }
     return YES;
 }
+
+//
 
 - (IBAction)loadTT:(id)sender
 {
