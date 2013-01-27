@@ -185,4 +185,9 @@
 	[self refreshFromModel];
 }
 
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+	return UIInterfaceOrientationIsLandscape(toInterfaceOrientation)? true : false;
+}
+
 @end
